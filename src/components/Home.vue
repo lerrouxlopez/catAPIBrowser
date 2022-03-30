@@ -100,6 +100,7 @@ export default defineComponent({
             })
         }catch(err){
             console.log(err)
+            alert("Apologies but we could not load new cats for you at this time! Miau!")
         }
     },
     async getImages()
@@ -135,6 +136,7 @@ export default defineComponent({
             
         }catch(err){
             console.log(err)
+            alert("Apologies but we could not load new cats for you at this time! Miau!")
         }
     },
     async loadMore()

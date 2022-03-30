@@ -56,6 +56,7 @@ export default defineComponent({
             console.log(response.data)
         }catch(err){
             console.log(err)
+            alert("Apologies but we could not load new cats for you at this time! Miau!")
         }
     },
     goBack(){
