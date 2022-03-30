@@ -52,10 +52,7 @@ export default defineComponent({
             let response = await axios.get('https://api.thecatapi.com/v1/images/'+id )
             this.cat = response.data
             this.cat_details = response.data.breeds[0]
-            console.log(response.data.breeds[0])
-            console.log(response.data)
         }catch(err){
-            console.log(err)
             alert("Apologies but we could not load new cats for you at this time! Miau!")
         }
     },

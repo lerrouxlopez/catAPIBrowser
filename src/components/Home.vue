@@ -69,10 +69,9 @@ export default defineComponent({
   },
   created(){
     this.getBreeds();
-    console.log(this.$route.query.breed)
+
     if(this.$route.query.breed){
       this.selected_breed = this.$route.query.breed
-      this.selected_breed="option == 'test.'"
     }
   } ,
   watch: {
@@ -99,7 +98,6 @@ export default defineComponent({
               this.breeds.push(obj)
             })
         }catch(err){
-            console.log(err)
             alert("Apologies but we could not load new cats for you at this time! Miau!")
         }
     },
@@ -123,11 +121,6 @@ export default defineComponent({
               obj["url"] = value.url
               this.images.push(obj)
             })
-            console.log("page: ", this.page)
-            console.log("rsponse: ", response.data)
-            console.log("images array: ", this.images)
-            console.log("images length " , this.images.length)
-            console.log("pagination count ", this.pagination_count)
             if(this.images.length == this.pagination_count){
               // hide load more button
               this.isHidden = true
@@ -135,7 +128,6 @@ export default defineComponent({
 
             
         }catch(err){
-            console.log(err)
             alert("Apologies but we could not load new cats for you at this time! Miau!")
         }
     },
